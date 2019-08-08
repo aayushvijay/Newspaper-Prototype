@@ -1,0 +1,360 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>VIT Newspaper</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: #2f2f2f;
+        background-color: #f9f7f1;
+    }
+
+    header {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        font-size: 80px;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 72px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .head {
+        text-align: center;
+        position: relative;
+    }
+
+    .subhead {
+        text-transform: uppercase;
+        border-bottom: 2px solid #2f2f2f;
+        border-top: 2px solid #2f2f2f;
+        padding: 12px 0 12px 0;
+    }
+
+    .content {
+        font-size: 0;
+        line-height: 0;
+        word-spacing: -.31em;
+        display: inline-block;
+        margin: 30px 2% 0 2%;
+    }
+
+    .collumn {
+        font-size: 14px;
+        line-height: 20px;
+        width: 17.5%;
+        display: inline-block;
+        padding: 0 1% 0 1%;
+        vertical-align: top;
+        margin-bottom: 50px;
+        transition: all .7s;
+    }
+
+    .collumn+.collumn {
+        border-left: 1px solid #2f2f2f;
+    }
+
+    .collumn .headline {
+        text-align: center;
+        line-height: normal;
+        font-family: 'Playfair Display', serif;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .headline.hl1 {
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl2 {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 24px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl2:before {
+        border-top: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 7px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .headline.hl2:after {
+        border-bottom: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 13px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .headline.hl3 {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 36px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl4 {
+        font-weight: 700;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl4:before {
+        border-top: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 7px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .headline.hl4:after {
+        border-bottom: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .headline.hl5 {
+        font-weight: 400;
+        font-size: 42px;
+        text-transform: uppercase;
+        font-style: italic;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl6 {
+        font-weight: 400;
+        font-size: 18px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl6:before {
+        border-top: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 7px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .headline.hl6:after {
+        border-bottom: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .headline.hl7 {
+        font-weight: 700;
+        font-size: 12px;
+        box-sizing: border-box;
+        display: block;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl8 {
+        font-weight: 700;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl9 {
+        font-weight: 700;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .headline.hl10 {
+        font-weight: 700;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 10px 0 10px 0;
+    }
+
+    .collumn .citation {
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        font-weight: 400;
+        display: block;
+        margin: 40px 0 40px 0;
+    }
+
+    .collumn .citation:before {
+        border-top: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 16px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .citation:after {
+        border-bottom: 1px solid #2f2f2f;
+        content: '';
+        width: 100px;
+        height: 16px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .collumn .figure {
+        margin: 0 0 20px;
+    }
+
+    .collumn .figcaption {
+        font-style: italic;
+        font-size: 12px;
+    }
+
+    .media {
+        width: 100%;
+    }
+
+    .foot {
+        text-align: center;
+        background-color: silver;
+        padding: 0.8% 2% 0.8% 2%;
+        line-height: 24px;
+    }
+</style>
+
+<body>
+    <div class="head">
+        <div class="headerobjectswrapper">
+            <header>VIT Newspaper</header>
+        </div>
+        <div class="subhead">Vellore, TN - Tuesday July 30, 2019 </div>
+    </div>
+    <div class="content">
+        <div class="collumns">
+            <div class="collumn">
+                <div class="head"><span class="headline hl3">The AI Scientist</span>
+                    <p><span class="headline hl4">by MIT, Massachussetts</span></p>
+                </div>
+                <p>Cut off a flatworm’s head, and it’ll grow a new one. Cut it in half, and you’ll have two new worms.
+                    Fire
+                    some radiation at it, and it’ll repair itself. Scientists have wanted to work out the mechanisms
+                    involved for some time, but the secret has eluded them. Enter an AI coded at Tufts University,
+                    Massachusetts. By analysing and simulating countless scenarios, the computer was able to solve the
+                    mystery of the flatworm’s regeneration in just 42 hours. In the end it produced a comprehensive
+                    model of
+                    how the flatworm’s genes allow it to regenerate.</p>
+
+                <p>Although humans still need to feed the AI with information, the machine in this experiment was able
+                    to
+                    create a new, abstract theory independently – a huge step towards the development of a conscious
+                    computer, and potentially a landmark step in the way we carry out research.</p>
+            </div>
+
+            <div class="collumn">
+                <div class="head"><span class="headline hl1">Crowd Sourced Antibiotics</span>
+                    <p><span class="headline hl2">Better Medicine delivery</span></p>
+                </div>Swallowing seawater is part of surfing. But now the scientists behind a new initiative called
+                Beach Bums want to swab the rectums of surfers, to see if this water contains the key to developing new
+                antibiotics. They’re searching for antibiotic resistant bacteria known as superbugs: by studying the
+                samples from the surfers, they hope to learn more about these potentially dangerous organisms in the
+                hope of producing new drugs to combat them.</p>
+
+                <p> <span class="citation">Sleep in a petri dish</span>
+                    Up to 30 per cent of us have trouble sleeping, but help may be at hand. A team at Washington State
+                    University has identified the smallest set of neurones in our brains responsible for sleeping, grown
+                    a tiny group of these cells in the lab and induced them to fall asleep and wake up. Their work could
+                    help to unravel the science of sleep disorders.</p>
+            </div>
+            <div class="collumn">
+                <div class="head"><span class="headline hl3">Floating Farms</span>
+                    <p><span class="headline hl4">A thousand unknown plants</span></p>
+                </div>
+                <p>The UN predicts there will be two billion more people in the world by 2050, creating a demand for 70
+                    per cent more food. By that time, 80 per cent of us will be living in cities, and most food we eat
+                    in urban areas is brought in. So farms moored on the sea or inland lakes close to cities would
+                    certainly reduce food miles. But how would they work? A new design by architect Javier Ponce of
+                    Forward Thinking Architecture shows a 24m-tall, three-tiered structure with solar panels on top to
+                    provide energy. The middle tier grows a variety of veg over an area of 51,000m2, using not soil but
+                    nutrients in liquid. These nutrients and plant matter would drop into the bottom layer to feed fish,
+                    which are farmed in an enclosed space.</p>
+
+                <p>A single Smart Floating Farm measuring 350 x 200m would produce an estimated 8.1 tonnes of
+                    vegetables and 1.7 tonnes of fish a year. The units are designed to bolt together, which is handy
+                    since we’ll need a lot of them: Dubai, for instance, imports 11,000 tonnes of fruit and veg every
+                    day.</p>
+            </div>
+            <div class="collumn">
+                <div class="head"><span class="headline hl5">Internet for everyone</span>
+                    <p><span class="headline hl6">The crowd seemed to grow</span></p>
+                </div>
+                <p>We can’t seem to live without the internet (how else would you read sciencefocus.com?), but still
+                    only
+                    around half the world’s population is connected. There are many reasons for this, including economic
+                    and
+                    social reasons, but for some the internet just isn’t accessible because they have no connection.</p>
+
+                <p>Google is slowly trying to solve the problem using helium balloons to beam the internet to
+                    inaccessible
+                    areas, while Facebook has abandoned plans to do the same using drones, which means companies like
+                    Hiber
+                    are stealing a march. They have taken a different approach by launching their own network of
+                    shoebox-sized microsatellites into low Earth orbit, which wake up a modem plugged into your computer
+                    or
+                    device when it flies over and delivers your data.</p>
+
+                Their satellites orbit the Earth 16 times a day and are already being used by organisations like The
+                British Antarctic Survey to provide internet access to very extreme of our planet.</p>
+            </div>
+            <div class="collumn">
+                <div class="head"><span class="headline hl1">Heart Monitoring T-shirt</span>
+                    <p><span class="headline hl4">"It wasn't a dream"</span></p>
+                </div>
+                <p>Wearable sports bands that measure your heart rate are nothing new, but as numerous studies have
+                    shown, the accuracy can vary wildly (especially if you rely on them to count calories). In general,
+                    that’s fine if you just want an idea of how hard you’re working out, but for professionals, accuracy
+                    is everything.</p>
+                <p>Using a single lead ECG printed into the fabric, this new t-shirt from smart materials company
+                    KYMIRA will accurately measure heart beats and upload them to the cloud via Bluetooth. Once there,
+                    algorithms process the data to accurately detect irregular heartbeats such as arrhythmia heart
+                    beats, which could prove life saving. </p>
+                <p>
+                    And it’s not just athletes who could benefit. “The possibilities this product offers both
+                    sportspeople and the general public is astonishing,” says Tim Brownstone, CEO and founder of KYMIRA.
+                    “We envisage developing this product to be used for clinical applications to allow those who may
+                    already suffer with heart conditions enough warning of a heart attack.”</p>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="foot">
+    Copyright &copy<br>Made by Aayush Vijay Wargiya
+</footer>
+
+</html>
